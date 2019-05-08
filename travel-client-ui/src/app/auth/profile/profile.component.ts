@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  name = 'XYZ';
-  clientid = 158;
-  email = 'XYZ@email.com';
-  tel = '+31(0)6 1234 5678';
-  accountmanager = 'XYZ Manager';
-  public data = [];
+  profile = {
+    name: 'XYZ',
+    clientid: 158,
+    email: 'XYZ@email.com',
+    tel: '+31(0)6 1234 5678',
+    accountmanager: 'XYZ Manager'
+  }
 }

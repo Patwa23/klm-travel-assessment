@@ -20,13 +20,19 @@ export class AirportsComponent implements OnInit {
   isHide = true;
   isPanelExpanded = true;
   code = '';
-
   hideValidation = false;
-
   airports: Airport[];
   sourceAirportCtrl = new FormControl('', Validators.required);
   filteredSourceAirport: Observable<Airport[]>;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
+  constructor(private airportService: AirportService) { }
+
+  ngOnInit() {
+    //----Code
+    this.airport = [] //TABLE DATASOURCE
+  }
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim().toLowerCase(); // Remove whitespace
     this.dataSource.filter = filterValue;
@@ -46,17 +52,6 @@ export class AirportsComponent implements OnInit {
         });
         return matchFilter.every(Boolean); // AND
       }
-  }
-
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-
-  constructor(private airportService: AirportService) {
-  }
-
-  ngOnInit() {
-    //----Code
-    this.airport = [] //TABLE DATASOURCE
   }
 
   getAirports() {

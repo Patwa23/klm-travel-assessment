@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { MaincontainerComponent } from './maincontainer/maincontainer.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ChartComponent } from '../technicalcomponents/charts/chart.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -23,7 +22,6 @@ import { AuthModule } from '../auth/auth.module';
         MaincontainerComponent,
         HeaderComponent,
         FooterComponent,
-        ChartComponent,
         DashboardComponent,
         ErrorDialogComponent
     ],
@@ -39,7 +37,6 @@ import { AuthModule } from '../auth/auth.module';
         HeaderComponent,
         FooterComponent,
         MaincontainerComponent,
-        ChartComponent,
         DashboardComponent,
     ],
     providers: [

@@ -44,17 +44,9 @@ import { BASE_URL } from './auth/auth.token';
             positionClass: 'toast-bottom-left',
             preventDuplicates: false
         }),
-
-        //     OAuthModule.forRoot({
-        //         resourceServer: {
-        //           allowedUrls: ['http://localhost:8080/oauth/token?grant_type=password'],
-        //           sendAccessToken: true
-        //         }
-        //   })
     ],
     providers: [
         Title,
-        // { provide: BASE_URL, useValue: 'http://localhost:8080' }
     ],
     bootstrap: [
         AppComponent,

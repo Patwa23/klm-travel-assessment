@@ -15,7 +15,7 @@ import { Airport } from '../../airports/airports.model';
   templateUrl: './fare-search.component.html',
   styleUrls: ['./fare-search.component.css']
 })
-export class FareSearchComponent {
+export class FareSearchComponent implements OnInit {
   fare: Fare;
   isCardHide = true;
   isPanelExpanded = true;
@@ -30,20 +30,19 @@ export class FareSearchComponent {
 
   constructor(private fareService: FareService,
     private toastr: ToastrService,
-    private airportService: AirportService) {
+    private airportService: AirportService) { }
 
+  ngOnInit() {
     this.airportService.getAirports()
       .subscribe(
         data => {
           let locations = data['_embedded'];
           this.airports = locations['locations'];
-
           this.filteredSourceAirport = this.sourceAirportCtrl.valueChanges
             .pipe(
               startWith(''),
               map(state => state ? this._filterStates(state) : this.airports.slice()),
           );
-
           this.filteredDestinationAirport = this.destinationAirportCtrl.valueChanges
             .pipe(
               startWith(''),

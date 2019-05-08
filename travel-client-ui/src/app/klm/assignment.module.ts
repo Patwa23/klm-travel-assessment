@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { FileDropModule } from 'ngx-file-drop';
-
-
 import { AssignmentRoutingModule } from './assignment-routing.module';
 import { MaterialModule } from '../material.module';
 import { CommonModule } from '@angular/common';

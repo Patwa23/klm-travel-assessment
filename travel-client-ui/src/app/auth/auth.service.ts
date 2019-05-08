@@ -22,7 +22,7 @@ export class AuthService {
   public loginUser(username: string, password: string) {
     return this.http.get('data/auth.json', )
       .subscribe(data => {
-        if (username === username && password === password) {
+        if (data['username'] === username && data['password'] === password) {
           this.loggedIn = true;
           this.router.navigate(['/']);
           this.toastr.info("Authentication", "Successfully Authentication");

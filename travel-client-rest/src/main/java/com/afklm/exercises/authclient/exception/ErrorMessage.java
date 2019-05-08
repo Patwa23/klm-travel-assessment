@@ -8,8 +8,8 @@ import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
-public class ErrorMessage  {
-    private  static final long serialVersionUID = 1L;
+public class ErrorMessage {
+    private static final long serialVersionUID = 1L;
 
     private LocalDate localDate;
     private String errorMessageDescription;

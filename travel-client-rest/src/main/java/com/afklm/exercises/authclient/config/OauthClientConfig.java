@@ -14,40 +14,27 @@ import org.springframework.web.client.RestTemplate;
 
 @Configuration
 @EnableOAuth2Client
-@EnableAsync
-public class OauthClientConfig extends WebSecurityConfigurerAdapter{
-
+public class OauthClientConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     @ConfigurationProperties("spring.security.oauth2.client")
-    public ClientCredentialsResourceDetails oAuthDetails(){
+    public ClientCredentialsResourceDetails oAuthDetails() {
         return new ClientCredentialsResourceDetails();
     }
 
     @Bean
-    @Qualifier("oauth2resttemplate")
-    public RestTemplate oauth2resttemplate(){
-        return new OAuth2RestTemplate(oAuthDetails());
-    }
+    public RestTemplate oauth2RestTemplate() { return new OAuth2RestTemplate(oAuthDetails()); }
 
     @Bean
-    @Qualifier("resttemplate")
-    public RestTemplate restTemplate(){
-        return new RestTemplate();
+    public RestTemplate restTemplate() { return new RestTemplate();
     }
-
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                .csrf().disable().authorizeRequests()
-                .anyRequest().permitAll();
-
+            http.csrf()
+                .disable()
+                .authorizeRequests()
+                .anyRequest()
+                .permitAll();
     }
-
-
-
-
-
-
 }

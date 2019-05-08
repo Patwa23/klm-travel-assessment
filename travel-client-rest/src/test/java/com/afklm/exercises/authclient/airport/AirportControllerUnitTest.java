@@ -1,5 +1,7 @@
 package com.afklm.exercises.authclient.airport;
 
+import com.afklm.exercises.authclient.airport.controller.AirportController;
+import com.afklm.exercises.authclient.airport.service.AirportService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,5 +1,5 @@
 # travel-assignment
-Application  is based on Angular 6 &amp; Oauth2 Client (which consumes Oauth2 Server)
+Application  is based on Angular 6 &amp; OAuth2 Client (which consumes Oauth2 Server)
 
 `travel-client-rest` folder
 ## Backend: Java Spring boot | Oath2 Client | Restful

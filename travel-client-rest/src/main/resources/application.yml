@@ -14,14 +14,15 @@ spring:
         scope: read write trust
         access-token-uri: http://localhost:8080/oauth/token
 
-oauth:
+
+  profiles:
+    active: test
+
   resource:
     airport: http://localhost:8080/airports
     fare: http://localhost:8080/fares
     trace: http://localhost:9091/manage/httptrace
-crossOrigin:
-  allowedOrigins:
-    frontend: http://localhost:4200
+
 
 debug: false
 

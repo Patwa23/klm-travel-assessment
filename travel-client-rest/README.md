@@ -1,7 +1,7 @@
 KLM Travel Rest Client
 ======================
 
-Java RESTtful OAuth2 Client Web service - Consume the mocked services from the service mock project.
+Java RESTful OAuth2 Client Web service - Consume the mocked services from the service mock project.
 The authentication is on application level, so make sure the UI is not bothered with authentication.
 
 #### Add statistics for your backend

@@ -10,7 +10,7 @@ I splitted this use case into following different small user-story.
 7) Manual integration testing of all the services.
 8) Documentation  such as comments, writing Readme file for frontend and backend.
 9) Run and test all the application as Production ready app.
-10) Refactoring and code alignment check
+10) Refactoring and code alignment check.
 
 
 # Improvement required

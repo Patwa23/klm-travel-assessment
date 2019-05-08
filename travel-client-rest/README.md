@@ -19,8 +19,6 @@ The authentication is on application level, so make sure the UI is not bothered 
 * RESTful
 * Lombok
 * Commons Lang/Collections
-* JUnit 5
-* Mockito 2
 * Maven 3
 * Tomcat 8
 

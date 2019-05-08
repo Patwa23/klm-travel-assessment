@@ -68,5 +68,5 @@ This will gives list of Airport
 
 Once you are logged in Profile : Gives the profile info
 
-NOTE: Kindly run the backend the backend before using the frontend. 
+NOTE: Kindly run the backend before using the frontend. 
 

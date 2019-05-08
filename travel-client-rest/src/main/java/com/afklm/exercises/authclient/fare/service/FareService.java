@@ -14,7 +14,7 @@ public interface FareService {
      * @param currency    the requested resulting currency, supported ones are EUR and USD
      * @return return a fare
      */
-    public CompletableFuture<FareDTO> getFare(String origin, String destination, String currency);
+    public CompletableFuture<FareDTO> getFares(String origin, String destination, String currency);
 
 
 }

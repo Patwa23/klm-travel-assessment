@@ -24,7 +24,7 @@ public interface AirportService {
      * @param key  Airport Code
      * @return Retrieve a specific airport
      */
-    public CompletableFuture<Location> getAirportListByCode(String lang, String key);
+    public CompletableFuture<Location> getAirportByCode(String lang, String key);
 
     /**
      * Search term that searches through code, name and description.
@@ -35,7 +35,7 @@ public interface AirportService {
      * @param page the page to be selected in the paged response
      * @return
      */
-    public CompletableFuture<String> findAirport(String lang, String term, String size, String page);
+    public CompletableFuture<String> findAirportsByCode(String lang, String term, String size, String page);
 
 
 }

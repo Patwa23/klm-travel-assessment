@@ -29,15 +29,14 @@ public class AirportServiceImpl implements AirportService {
         return createAsyncAirport(cf);
     }
 
-    public CompletableFuture<Location> getAirportListByCode(String lang, String key) {
+    public CompletableFuture<Location> getAirportByCode(String lang, String key) {
         String url = getAirportListByCodeUrl(lang, key);
-        return getAirportListAsync1(url);
-//        CompletableFuture<Location> cf =  getAirportListAsync1(url);
-//        return createAsyncAirport(cf);
+        CompletableFuture<Location> cf =  getAirportByCodeAsync(url);
+        return createAsyncAirportByCode(cf);
     }
 
-    public CompletableFuture<String> findAirport(String lang, String term, String size, String page) {
-        String url = findAirportUrl(lang, term, size, page);
+    public CompletableFuture<String> findAirportsByCode(String lang, String term, String size, String page) {
+        String url = findAirportsByCodeUrl(lang, term, size, page);
         CompletableFuture<String> cf = getAirportListAsync(url);
         return createAsyncAirport(cf);
     }
@@ -48,9 +47,9 @@ public class AirportServiceImpl implements AirportService {
         });
     }
 
-    private CompletableFuture<Location> getAirportListAsync1(String url) {
+    private CompletableFuture<Location> getAirportByCodeAsync(String url) {
         return CompletableFuture.supplyAsync(() -> {
-            return getAiportRest1(url);
+            return getAiportByCodeRest(url);
         });
     }
 
@@ -63,7 +62,7 @@ public class AirportServiceImpl implements AirportService {
         }
     }
 
-    private Location getAiportRest1(String url) {
+    private Location getAiportByCodeRest(String url) {
         try {
             Location result = oauth2RestTemplate.getForObject(url, Location.class);
             return result;
@@ -95,7 +94,7 @@ public class AirportServiceImpl implements AirportService {
         return builder.buildAndExpand(uriParams).toUriString();
     }
 
-    private String findAirportUrl(String lang, String term, String size, String page) {
+    private String findAirportsByCodeUrl(String lang, String term, String size, String page) {
         // Query parameters
         UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(airportResourceUrl)
                 .queryParam("lang", lang)
@@ -106,6 +105,19 @@ public class AirportServiceImpl implements AirportService {
     }
 
     private CompletableFuture<String> createAsyncAirport(CompletableFuture<String> result) {
+        return result.thenApplyAsync(s -> {
+            log.info(Thread.currentThread().getName());
+            return s;
+        }).whenComplete((asyncResult, throwable) -> {
+            if (throwable == null) {
+                result.complete(asyncResult);
+            } else {
+                result.completeExceptionally(throwable);
+            }
+        });
+    }
+
+    private CompletableFuture<Location> createAsyncAirportByCode(CompletableFuture<Location> result) {
         return result.thenApplyAsync(s -> {
             log.info(Thread.currentThread().getName());
             return s;

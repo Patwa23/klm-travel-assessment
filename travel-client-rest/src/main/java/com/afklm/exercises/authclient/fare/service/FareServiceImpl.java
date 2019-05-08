@@ -29,9 +29,9 @@ public class FareServiceImpl implements FareService {
     @Autowired
     private AirportService airportService;
 
-    public CompletableFuture<FareDTO> getFare(String origin, String destination, String currency) {
-        CompletableFuture<Location> originResponse = airportService.getAirportListByCode("en", origin);
-        CompletableFuture<Location> destinationResponse = airportService.getAirportListByCode("en", destination);
+    public CompletableFuture<FareDTO> getFares(String origin, String destination, String currency) {
+        CompletableFuture<Location> originResponse = airportService.getAirportByCode("en", origin);
+        CompletableFuture<Location> destinationResponse = airportService.getAirportByCode("en", destination);
         CompletableFuture<Fare> fareResponse = getFareAsync(origin, destination, currency);
 
         try {

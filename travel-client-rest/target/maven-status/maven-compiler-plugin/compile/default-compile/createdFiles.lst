@@ -1,0 +1,17 @@
+com/afkl/exercises/authclient/config/OauthClientConfig.class
+com/afkl/exercises/authclient/fare/FareException.class
+com/afkl/exercises/authclient/fare/FareController.class
+com/afkl/exercises/authclient/airport/AirportController.class
+com/afkl/exercises/authclient/monitor/HttpTraceController.class
+com/afkl/exercises/authclient/graph/GraphController.class
+com/afkl/exercises/authclient/fare/FareService.class
+com/afkl/exercises/authclient/fare/Fare.class
+com/afkl/exercises/authclient/monitor/Traffic.class
+com/afkl/exercises/authclient/AuthClientApplication.class
+com/afkl/exercises/authclient/exception/AppExceptionsHandler.class
+com/afkl/exercises/authclient/airport/AirportService.class
+com/afkl/exercises/authclient/fare/Currency.class
+com/afkl/exercises/authclient/utils/AuthClientUtils.class
+com/afkl/exercises/authclient/exception/ErrorMessage.class
+com/afkl/exercises/authclient/config/WebConfig.class
+com/afkl/exercises/authclient/monitor/HttpTraceService.class

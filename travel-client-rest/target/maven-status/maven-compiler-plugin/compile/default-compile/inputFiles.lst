@@ -1,0 +1,17 @@
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/fare/FareService.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/airport/AirportController.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/config/OauthClientConfig.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/fare/FareException.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/exception/AppExceptionsHandler.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/monitor/HttpTraceController.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/monitor/HttpTraceService.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/graph/GraphController.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/exception/ErrorMessage.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/utils/AuthClientUtils.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/config/WebConfig.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/fare/Currency.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/fare/FareController.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/AuthClientApplication.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/fare/Fare.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/airport/AirportService.java
+/Users/patwa/Mondrian/KLM/travel-assessment/travel-client-rest/src/main/java/com/afkl/exercises/authclient/monitor/Traffic.java

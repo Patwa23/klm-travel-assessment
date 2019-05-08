@@ -1,0 +1,45 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /client
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  security:
+    oauth2:
+      client:
+        client-id: travel-api-client
+        client-secret: psw
+        grant-type: client_credentials
+        scope: read write trust
+        access-token-uri: http://localhost:8080/oauth/token
+
+oauth:
+  resource:
+    airport: http://localhost:8080/airports
+    fare: http://localhost:8080/fares
+    trace: http://localhost:9091/manage/httptrace
+crossOrigin:
+  allowedOrigins:
+    frontend: http://localhost:4200
+
+debug: false
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+
+management:
+  endpoints:
+    web:
+      base-path: /manage
+      exposure:
+        include: httptrace
+  server:
+    port: 9091
+
+
+
+
+

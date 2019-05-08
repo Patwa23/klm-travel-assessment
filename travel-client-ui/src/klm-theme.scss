@@ -1,0 +1,7 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$klm-app-primary: mat-palette($mat-light-blue, 500);
+$klm-app-accent: mat-palette($mat-gray, 500);
+$klm-app-warn: mat-palette($mat-red);
+$klm-custom-app-theme: mat-light-theme($klm-app-primary, $klm-app-accent, $klm-app-warn);
+@include angular-material-theme($klm-custom-app-theme);

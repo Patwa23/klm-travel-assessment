@@ -1,0 +1,45 @@
+<!--Search started-->
+
+<mat-expansion-panel [expanded]="isPanelExpanded">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h5>Select Airport</h5>
+      {{isSpinnerHide}}
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="row">
+    <div class="col-sm">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Source" aria-label="Airport" [matAutocomplete]="sourceAirport" [formControl]="sourceAirportCtrl">
+        <mat-autocomplete #sourceAirport="matAutocomplete">
+          <mat-option *ngFor="let airport of filteredSourceAirport | async" [value]="airport.code">
+            <span>{{airport.name}}</span> |
+            <small>{{airport.code}}</small>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+    <div class="col-sm">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Destination" aria-label="Airport" [matAutocomplete]="destinationAirport" [formControl]="destinationAirportCtrl">
+        <mat-autocomplete #destinationAirport="matAutocomplete">
+          <mat-option *ngFor="let airport of filteredDestinationAirport | async  " [value]="airport.code">
+            <span>{{airport.name}}</span> |
+            <small>{{airport.code}}</small>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+    <div class="col-sm">
+      <span class="left-margin">
+        <button mat-raised-button color="primary" (click)=getFare()>Get Fare</button>
+      </span>
+      <span class="left-margin">
+        <button mat-raised-button color="accent" (click)=reset()>Clear</button>
+      </span>
+    </div>
+  </div>
+</mat-expansion-panel>
+
+<!--Search ended-->
+<app-fare-output [fare]="fare" [isCardHide]="isCardHide" [isSpinnerHide]="isSpinnerHide"></app-fare-output>

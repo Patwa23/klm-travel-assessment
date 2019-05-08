@@ -1,0 +1,28 @@
+<!-- started-->
+<mat-card [hidden]="isSpinnerHide">
+    <mat-spinner></mat-spinner>
+</mat-card>
+<mat-card [hidden]="isCardHide">
+    <mat-horizontal-stepper>
+        <mat-step>
+            <ng-template matStepLabel>
+                <h2>{{fare.origin['name']}} - {{fare.origin['code']}}</h2>
+            </ng-template>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>
+                <h2>{{fare.destination['name']}}- {{fare.destination['code']}}</h2>
+            </ng-template>
+        </mat-step>
+    </mat-horizontal-stepper>
+
+    <div class="row">
+        <div class="col jumbotron d-flex justify-content-center align-items-center">
+            <fa name="plane"></fa>
+        </div>
+        <div class="col  jumbotron d-flex  align-items-center">
+            <h1>{{fare.amount}} {{fare.currency}}</h1>
+        </div>
+    </div>
+</mat-card>
+<!--ended-->

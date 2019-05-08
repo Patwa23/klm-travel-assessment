@@ -1,0 +1,17 @@
+.mat-card {
+    margin-bottom: 60px;
+}
+
+fa {
+    font-size: 9.5em;
+    color: #31a1dd;
+}
+
+.mat-spinner {
+    position: relative;
+    margin-left: 50%;
+}
+
+h1 {
+    font-size: 3.5em;
+}

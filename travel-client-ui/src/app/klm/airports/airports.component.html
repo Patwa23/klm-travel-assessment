@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  <h1>AirportOverview</h1>
+
+  <!--Search started-->
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="isPanelExpanded">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>search</mat-icon>
+          <h5>Search by Code,Name & Description</h5>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="input-full-width">
+            <input matInput placeholder="Code" aria-label="Airport" [matAutocomplete]="sourceAirport" [formControl]="sourceAirportCtrl"
+              (input)="onSearchChange($event.target.value)" maxlength="3">
+            <mat-autocomplete #sourceAirport="matAutocomplete">
+              <mat-option *ngFor="let airport of filteredSourceAirport | async" [value]="airport.code">
+                <span>{{airport.name}}</span> |
+                <small>{{airport.code}}</small>
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <span class="left-margin">
+            <button mat-raised-button color="primary" (click)=getAirports()> Search</button>
+          </span>
+          <span class="left-margin">
+            <button mat-raised-button color="accent" (click)=reset()> Clear</button>
+          </span>
+        </div>
+      </div>
+    </mat-expansion-panel>
+    <!--Search ended-->
+
+    <!-- started-->
+    <mat-card [hidden]="isHide">
+
+      <mat-form-field class="full">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter by code">
+      </mat-form-field>
+      <!-- Table Started -->
+      <table mat-table #table [dataSource]="dataSource" matSort class="table-hover">
+
+        <ng-container *ngFor="let disCol of displayedColumns; let colIndex = index" matColumnDef="{{disCol}}">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>{{disCol}}</th>
+          <td mat-cell *matCellDef="let element "> {{element[disCol]}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <!-- Table Ended -->
+      <!-- Pagination Started -->
+      <mat-paginator #paginator [length]="dataSource?.filteredData.length" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5, 10, 25 ,100]"
+        showFirstLastButtons>
+      </mat-paginator>
+      <!-- Pagination Started -->
+    </mat-card>
+    <!--ended-->
+  </mat-accordion>
+
+</div>

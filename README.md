@@ -21,7 +21,7 @@ URL: https://github.com/Patwa23/klm-travel-assessment/tree/master/screenshot
 URL: https://github.com/Patwa23/klm-travel-assessment/blob/master/Task2.md
 
 # Task 3: Solve a bug
-URL: 
+URL: https://github.com/Patwa23/klm-travel-assessment/blob/master/Task3.md
 
 
 

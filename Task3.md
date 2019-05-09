@@ -17,7 +17,7 @@ Functionality:
 4) Once the token has been successfully validated, a form will be displayed allowing the user to reset their password.
 
 Steps: 
-URL: 
+URL: https://github.com/Patwa23/klm-travel-assessment/blob/master/screenshot/reset-password-workflow-preview-opt.png
 
 JWT:
 A JSON Web Token (JWT), in its simplest form, is a URL-safe string that contains an encoded JSON object. JWTs are an open industry standard that are fully described in RFC 7519, which contains an immense amount of detail, specifically regarding how JWT claims function to ensure the security of a generated token. Feel free to peruse the full RFC specifications at your leisure.

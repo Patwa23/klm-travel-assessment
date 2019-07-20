@@ -1,0 +1,5 @@
+
+osquid:S16023"SRemove useless curly braces around statement and then remove useless return keyword(şÍ¥«ùÿÿÿÿ
+zsquid:S1488:"^Immediately return this expression instead of assigning it to the temporary variable "result".(Ãœûÿÿÿÿ
+usquid:S1488C"^Immediately return this expression instead of assigning it to the temporary variable "result".(ĞµõÀ
+osquid:S1602-"SRemove useless curly braces around statement and then remove useless return keyword(şÍ¥«ùÿÿÿÿ

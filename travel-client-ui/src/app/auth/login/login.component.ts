@@ -18,6 +18,7 @@ export class LoginComponent {
     private toastr: ToastrService) { }
 
   public onLogin(form: NgForm) {
+
     const username = form.value.username;
     const password = form.value.password;
     if (!form.valid) {

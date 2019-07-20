@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -8,8 +9,12 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "allowUnreachableCode": false,
+    "strictNullChecks": false,
     "typeRoots": [
-      "node_modules/@types"
+      "./node_modules/@types"
     ],
     "lib": [
       "es2017",

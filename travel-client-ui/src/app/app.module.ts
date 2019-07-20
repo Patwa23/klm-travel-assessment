@@ -9,9 +9,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { FileDropModule } from 'ngx-file-drop';
 import { AgGridModule } from 'ag-grid-angular';
-import { _ } from 'underscore';
-import more from 'highcharts/highcharts-more.src';
-import exporting from 'highcharts/modules/exporting.src';
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { Store, StoreModule } from '@ngrx/store'

@@ -7,22 +7,65 @@
 	<title>KLM Portal</title>
 	<base href="/">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Facebook,Whatsapp,Linkedin -->
 	<meta property="og:url" content="https://klm-travel-assignment.firebaseapp.com/dev/dashboard" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="My KLM" />
 	<meta property="og:description" content="This is my first social sharing using open graph" />
-	<meta property="og:image" content="https://img.static-kl.com/images/media/A4A9C707-B056-4C97-866E847ECC953BBD?extent=true"
+	<meta property="og:image" content="https://img.static-kl.com/images/media/D29A09FC-AB1E-4B81-96E72A31748D5820?aspect_ratio=1.91:1"
 	/>
-	<meta property="og:image:secure_url" content="https://img.static-kl.com/images/media/A4A9C707-B056-4C97-866E847ECC953BBD?extent=true"
+	<meta property="og:image:secure_url" content="https://img.static-kl.com/images/media/D29A09FC-AB1E-4B81-96E72A31748D5820?aspect_ratio=1.91:1"
 	/>
-	<meta property="og:image:width" content="300" />
-	<meta property="og:image:height" content="300" />
+	<meta property="og:image:width" content="600" />
+	<meta property="og:image:height" content="400" />
+	<meta property="og:image:alt" content="My Image" />
 	<meta property="fb:app_id" content="2849885601694802" />
+
+	<!--Twitter -->
+	<!-- <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@KLM">
+	<meta name="twitter:creator" content="@PrakashPatwa">
+	<meta name="twitter:title" content="KLM Career">
+	<meta name="twitter:description" content="My First twitter social sharing via open graph">
+	<meta name="twitter:image" content="https://img.static-kl.com/images/media/D29A09FC-AB1E-4B81-96E72A31748D5820?aspect_ratio=1:1&min_width=600">
+	<meta name="twitter:image:alt" content="My Image"> -->
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="canonical" href="/web/tweet-button">
+
+	<script>
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+
+		window.twttr = (function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0],
+				t = window.twttr || {};
+			if (d.getElementById(id))
+				return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js,
+				fjs);
+			t._e = [];
+			t.ready = function (f) {
+				t._e.push(f);
+			};
+			return t;
+		}(document, "script", "twitter-wjs"));
+	</script>
+
 </head>
 
 <body>
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.3&appId=2849885601694802&autoLogAppEvents=1"></script>
 	<app-root></app-root>
 </body>
 
